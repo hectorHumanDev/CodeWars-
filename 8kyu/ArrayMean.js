@@ -10,3 +10,4 @@
 var findAverage = function (nums) {
     return nums.reduce((sum, val) => sum + val, 0) / nums.length
   }
+  
