@@ -10,17 +10,22 @@
 
 // Kata.getMiddle("A") should return "A"
 
-
 // ===============================Solution=============================
 
 function getMiddle(s) {
-    if (s.length == 1) {
-        return s;
-    } else if (s.length % 2 == 0) {
-        return s.slice((s.length / 2) - 1, (s.length / 2) + 1);
-    } else {
-        return s[Math.floor(s.length / 2)]
-    }
+  if (s.length == 1) {
+    return s;
+  } else if (s.length % 2 == 0) {
+    return s.slice(s.length / 2 - 1, s.length / 2 + 1);
+  } else {
+    return s[Math.floor(s.length / 2)];
+  }
 }
 
-console.log(getMiddle("middle"))
+// =====================================================or==============================
+
+function getMiddle(s) {
+  return s.slice((s.length - 1) / 2, s.length / 2 + 1);
+}
+
+console.log(getMiddle("middle"));
